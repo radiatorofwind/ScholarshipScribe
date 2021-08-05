@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    background-image: url("money.jpg");
+    text-align: center;
+    overflow: hidden;
+    touch-action: none;
+}
+#mainapp {
+    position: absolute;
+    top: 100%;
+    transition: top 1.5s;
+    transition-delay: 250ms;
+    box-shadow: black 0px 20px 20px;
+    background-color: white;
+    padding-left:9px;
+    padding-bottom:10px;
+    width:60%;
+    margin-left:19.7%;
+    border-radius: 50px;
+}
+#freemoney {
+    margin-top: -20px;
+    font-style: italic;
+    color:rgb(27, 209, 27);
+}
+.ptagcloser {
+    margin-top: -10px;
+}
+.inputs {
+    width: 225px;
+}
+#enscribe {
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius:15px;
+    box-shadow: black 0px 5px 10px;
+}
