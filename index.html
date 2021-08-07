@@ -1,47 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
     <head>
         <title>ScholarshipScribe</title>
         <meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
         <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" href="favicon.ico">
         <script src="main.js"></script>
     </head>
     <body id="body">
-        <div id="mainapp">
+        <div id="mainapp" class="apps">
             <h1 id="title">ScholarshipScribe</h1>
-            <h4 id="freemoney">"Free money!!!"</h4>
+            <h4 class="freemoney">"Free money!!!"</h4>
             <p>Welcome to ScholarshipScribe, the super easy way to quickly acquire as many scholarships as possible.</p>
-            <p class="ptagcloser">Mad at the system? This website is for you! And the best part is, this can be done by asking you 3 easy to answer questions.</p>
-            <p class="ptagcloser">Before that though, we need some information about you.</p>
-            <label for="emailbox">Please enter your email: </label>
-            <input type="email" id="emailbox">
-            <h2>Step 1: What are you interested in?</h2>
-            <p>Use the dropdown box below to select your interest.</p>
-            <select name="careers" id="careersdropdown" class="inputs">
-                <option value="choose">Choose an interest...</option>
-                <option value="cscience">Computer Science</option>
-                <option value="mathematics">Mathematics</option>
-                <option value="engineering">Engineering</option>
-                <option value="teaching">Teaching</option>
-                <option value="marketing">Marketing</option>
-                <option value="sports">Sports</option>
+            <p class="ptagcloser">Mad at the system? This website is for you! And the best part is, this can be done by asking you 5 easy to answer questions.</p>
+            <img src="thiscouldbeyou.jpg" id="couldbeyou"><br>
+            <label for="couldbeyou"><p style="font-style:italic;margin-top:-1px;">This could be you...</p></label>
+            <p>So, what're you waiting for? Click the button to get started!</p>
+            <button class="bigbuttons" id="startIt">Start!</button>
+        </div>
+        <div id="step1" class="apps">
+            <h1>STEP 1</h1>
+            <h4 class="freemoney">"Just getting started"</h4>
+            <p>For step 1, we will need your e-mail address.</p>
+            <p class="ptagcloser">This is so that we can send your resume; we will not store this forever, obviously.<br>Type it in the box below.</p>
+            <form id="emailform" action="javascript:void(0)">
+                <input type="email" placeholder="money@rich.com" class="ptagcloser inputs" id="emailinput" required>
+                <input type="submit" id="emailsubmit" value="Validate" style="cursor:pointer;">
+            </form>
+            <p>Once you've entered it, click "Validate" to make sure the e-mail address is correct.<br>When it is, the "Next!" button will enable.</p>
+            <button class="bigbuttons" style="cursor:not-allowed;" disabled="true" id="step1Next">Next!</button>
+        </div>
+        <div id="step2" class="apps">
+            <h1>STEP 2</h1>
+            <h4 class="freemoney">"We're getting somewhere"</h4>
+            <p>For step 2, we need your resume so that we can actually send it.</p>
+            <p class="ptagcloser">Simply upload it with the "Choose File" button below.<br>You must upload a .PDF file, otherwise it will reject it.</p>
+            <input type="file" id="resumesubmit" accept="application/pdf" required><br><br>
+            <button id="step2Submit" class="bigbuttons" style="cursor:not-allowed" disabled="true">Submit!</button>
+        </div>
+        <div id="step3" class="apps">
+            <h1>STEP 3</h1>
+            <h4 class="freemoney">"Halfway there-ish!"</h4>
+            <p>Now that we have the information we need, it's time to select what you want!</p>
+            <p class="ptagcloser">In this step, you need to select what type of scholarship you want.</p>
+            <select id="careers" class="inputs">
+                <option value="selectsomething">Select an option...</option>
+                <option value="sports">Sports Scholarship</option>
+                <option value="academics">Academics Scholarship</option>
             </select>
-            <h2>Step 2: How prestigous should the college/university be?</h2>
-            <p>Use the dropdown box below to select the tier of college. This is based on how low the admission rate is.</p>
-            <select name="collegetier" id="collegedropdown" class="inputs">
-                <option value="choose">Choose a college type...</option>
-                <option value="tier1">Tier 1 (Best)</option>
-                <option value="tier2">Tier 2 (Second Best)</option>
-                <option value="tier3">Tier 3 (Middle)</option>
-                <option value="tier4">Tier 4 (Second Worst)</option>
-                <option value="tier5">Tier 5 (Worst)</option>
-            </select>
-            <h2>Step 3: How many schools do you want to apply to?</h2>
-            <p>Type the amount of schools you would like to apply to here. You can apply to only 500 max at a time.</p>
-            <input type="number" id="schoolamount" class="inputs" min=1 max=500>
-            <h2>Step 4: Enscribe!</h2>
-            <p>Ok, we lied. There's a fourth step, but luckily it's really easy; just click the button and you will send your emails!</p>
-            <button id="enscribe">Enscribe!</button>
+            <br><br><br>
+            <button id="step3Next" class="bigbuttons" style="cursor:not-allowed" disabled="true">Next!</button>
+        </div>
+        <div id="step4" class="apps">
+            <h1>STEP 4</h1>
+            <h4 class="freemoney">"Nearly there!"</h4>
+            <p>Well done so far. This is the last page before you can submit. Now is the time to finetune!</p>
+            <p class="ptagcloser">Use the selection boxes to finetune your messaging. When it's all done, hit "I'm Done!"</p>
+            <label for="numberofcolleges">1. How many colleges do you want to send the emails to? 500 maximum</label><br>
+            <input type="number" id="numberofcolleges" min=1 max=500>
+            <br><br><br><br><br>
+            <button id="step4Done" class="bigbuttons">I'm Done!</button>
+        </div>
+        <div id="step5" class="apps">
+            <h1>STEP 5</h1>
+            <h4 class="freemoney">"You're all done!"</h4>
+            <p>Congratulations! You have finished submitting information. This last step is very simple.</p>
+            <p class="ptagcloser">Simply press the "Send!" button. The console window will tell you where it's being sent to.</p>
+            <div id="sendterminal"></div>
+            <button id="step5Send" class="bigbuttons">Send!</button>
         </div>
     </body>
 </html>
